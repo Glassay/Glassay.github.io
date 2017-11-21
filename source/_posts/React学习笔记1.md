@@ -4,7 +4,7 @@ date: 2017-11-21 19:25:18
 tags:
 ---
 # React学习笔记1
-## Emmet一些常用的用法
+## 1.Emmet一些常用的用法
 +  子代节点: > <br>例如：div>ul>li在html中结构如下：
 ```html
 <div>
