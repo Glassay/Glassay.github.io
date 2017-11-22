@@ -27,7 +27,7 @@ tags:
   <blockquote></blockquote>
 </div>
 ```
-重复节点：* <br>例如：ul>li*5在html中结构如下：
+重复节点：\* <br>例如：ul>li\*5在html中结构如下：
 ```html
 <ul>
   <li></li>
