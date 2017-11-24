@@ -4,7 +4,7 @@
     <!-- Title -->
     
     <title>
-        我的第一篇博客 | chengjfblog
+        React学习笔记之组件的渲染和嵌套 | chengjfblog
     </title>
     
     <!-- Favicons -->
@@ -40,7 +40,7 @@
     <!-- The Open Graph protocol -->
     <meta property="og:url" content="Glassay.github.io">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="我的第一篇博客 | chengjfblog">
+    <meta property="og:title" content="React学习笔记之组件的渲染和嵌套 | chengjfblog">
     <meta property="og:description" content="start from zero">
     
      <!--[if lte IE 9]>
@@ -212,7 +212,7 @@
 	<ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect"
 		for="post-toc-trigger-btn">
 			
-			
+			<ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#组件的渲染和嵌套"><span class="post-toc-number">1.</span> <span class="post-toc-text">组件的渲染和嵌套</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#1-组件定义的两种方式"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">1.组件定义的两种方式</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#2-组建的渲染"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">2.组建的渲染</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#3-组建的嵌套"><span class="post-toc-number">1.3.</span> <span class="post-toc-text">3.组建的嵌套</span></a></li></ol></li></ol>
 		
 <!--			<li class="mdl-menu__item">Some Action</li>-->
 	</ul>
@@ -246,7 +246,7 @@
 		
 	
         <p class="article-headline-p">
-            我的第一篇博客
+            React学习笔记之组件的渲染和嵌套
         </p>
     </div>
 
@@ -264,7 +264,7 @@
     <!-- Author Name & Date -->
     <div>
         <strong>cheng</strong>
-        <span>11月 20, 2017</span>
+        <span>11月 24, 2017</span>
     </div>
     
     <div class="section-spacer"></div>
@@ -308,21 +308,21 @@
     
     
     <!-- Share Twitter -->
-    <a class="post_share-link" href="https://twitter.com/intent/tweet?text=我的第一篇博客&url=Glassay.github.io//2017/11/20/我的第一篇博客/index.html&via=cheng" target="_blank">
+    <a class="post_share-link" href="https://twitter.com/intent/tweet?text=React学习笔记之组件的渲染和嵌套&url=Glassay.github.io//2017/11/24/React学习笔记2之组件的渲染和嵌套/index.html&via=cheng" target="_blank">
         <li class="mdl-menu__item">
             分享到 Twitter
         </li>
     </a>
     
     <!-- Share Google+ -->
-    <a class="post_share-link" href="https://plus.google.com/share?url=Glassay.github.io//2017/11/20/我的第一篇博客/index.html" target="_blank">
+    <a class="post_share-link" href="https://plus.google.com/share?url=Glassay.github.io//2017/11/24/React学习笔记2之组件的渲染和嵌套/index.html" target="_blank">
         <li class="mdl-menu__item">
             分享到 Google+
         </li>
     </a>
     
     <!-- Share Weibo -->
-    <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=我的第一篇博客&url=Glassay.github.io//2017/11/20/我的第一篇博客/index.html&pic=&searchPic=false&style=simple" target="_blank">
+    <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=React学习笔记之组件的渲染和嵌套&url=Glassay.github.io//2017/11/24/React学习笔记2之组件的渲染和嵌套/index.html&pic=&searchPic=false&style=simple" target="_blank">
         <li class="mdl-menu__item">
             分享到微博
         </li>
@@ -334,7 +334,30 @@
                 <!-- Post Content -->
                 <div id="post-content" class="markdown-Github mdl-color-text--grey-700 mdl-card__supporting-text fade out">
 	
-		<p>你好,欢迎来到我的博客！^_^</p>
+		<h1 id="组件的渲染和嵌套"><a href="#组件的渲染和嵌套" class="headerlink" title="组件的渲染和嵌套"></a>组件的渲染和嵌套</h1><h2 id="1-组件定义的两种方式"><a href="#1-组件定义的两种方式" class="headerlink" title="1.组件定义的两种方式"></a>1.组件定义的两种方式</h2><ul>
+<li>函数定义组件</li>
+</ul>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Welcome</span>(<span class="params">props</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> &lt;h1&gt;Hello, &#123;props.name&#125;&lt;/h1&gt;;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>类定义组件（使用ES6的class语法）</li>
+</ul>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Welcome</span> <span class="keyword">extends</span> <span class="title">React</span>.<span class="title">component</span> </span>&#123;</span><br><span class="line">  render() &#123;</span><br><span class="line">    <span class="keyword">return</span> &lt;h1&gt;Hello, &#123;props.name&#125;&lt;/h1&gt;;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><strong>tips:</strong>&ensp;<strong>组件名称必须以大写字母开头.&ensp;例如：</strong></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">const element = <span class="tag">&lt;<span class="name">div</span> /&gt;</span>;</span><br></pre></td></tr></table></figure>
+<p>div只是DOM标签,而不是组件</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">const element = <span class="tag">&lt;<span class="name">Welcome</span> <span class="attr">name</span>=<span class="string">"Sara"</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>Welcome才是组件,而且是用户自定义的组件</p>
+<h2 id="2-组建的渲染"><a href="#2-组建的渲染" class="headerlink" title="2.组建的渲染"></a>2.组建的渲染</h2><p>*当React遇到的元素是用户自定义的组件，它会将JSX属性作为单个对象传递给该组件,这个对象称之为“props”。<br>例如,这段代码会在页面上渲染出”Hello,Sara”:</p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Welcome</span>(<span class="params">props</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> <span class="xml"><span class="tag">&lt;<span class="name">h1</span>&gt;</span>Hello, &#123;props.name&#125;<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> element = <span class="xml"><span class="tag">&lt;<span class="name">Welcome</span> <span class="attr">name</span>=<span class="string">"Sara"</span> /&gt;</span>;</span></span><br><span class="line"><span class="xml"></span></span><br><span class="line"><span class="xml">ReactDOM.render(</span></span><br><span class="line"><span class="xml">  element,</span></span><br><span class="line"><span class="xml">  document.getElementById('root');</span></span><br><span class="line"><span class="xml">);</span></span><br></pre></td></tr></table></figure>
+<h2 id="3-组建的嵌套"><a href="#3-组建的嵌套" class="headerlink" title="3.组建的嵌套"></a>3.组建的嵌套</h2><ul>
+<li>一个组件的可以渲染其他组件<br>例如：创建一个组件来多次渲染Welcome组件</li>
+</ul>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Welcome</span>(<span class="params">props</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> <span class="xml"><span class="tag">&lt;<span class="name">h1</span>&gt;</span>Hello, &#123;props.name&#125;<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">App</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  &lt;div&gt;</span><br><span class="line">    &lt;Welcome name=<span class="string">"Sara"</span> /&gt;</span><br><span class="line">    &lt;Welcome name=<span class="string">"Peter"</span> /&gt;</span><br><span class="line">    &lt;Welcome name=<span class="string">"Lisa"</span> /&gt;</span><br><span class="line">  &lt;<span class="regexp">/div&gt;</span></span><br><span class="line"><span class="regexp">&#125;</span></span><br><span class="line"><span class="regexp"></span></span><br><span class="line"><span class="regexp">ReactDOM.render(</span></span><br><span class="line"><span class="regexp">  &lt;App /</span>&gt;,</span><br><span class="line">  <span class="built_in">document</span>.getElementById(<span class="string">'root'</span>)</span><br><span class="line">);</span><br></pre></td></tr></table></figure>
+<ul>
+<li>错误的写法</li>
+</ul>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Welcome</span>(<span class="params">props</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> <span class="xml"><span class="tag">&lt;<span class="name">h1</span>&gt;</span>Hello, &#123;props.name&#125;<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span></span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">const</span> element(</span><br><span class="line">  &lt;div&gt;</span><br><span class="line">    &lt;Welcome name=<span class="string">"Sara"</span> /&gt;</span><br><span class="line">    &lt;Welcome name=<span class="string">"Peter"</span> /&gt;</span><br><span class="line">    &lt;Welcome name=<span class="string">"Lisa"</span> /&gt;</span><br><span class="line">  &lt;<span class="regexp">/div&gt;</span></span><br><span class="line"><span class="regexp">);</span></span><br><span class="line"><span class="regexp"></span></span><br><span class="line"><span class="regexp">ReactDOM.render(</span></span><br><span class="line"><span class="regexp">  element,</span></span><br><span class="line"><span class="regexp">  document.getElementById('root')</span></span><br><span class="line"><span class="regexp">);</span></span><br></pre></td></tr></table></figure>
+<p><strong>总结：</strong>&ensp;虽然两段代码运行的结果是一样的,但下面的代码并不是两个组建的嵌套,只是将Welcome组件渲染了三次,不涉及另一个组件;而正确的代码中Welcome组件是嵌套在App组件中渲染了三次.</p>
 
 	
 	
@@ -381,21 +404,13 @@
     
     <!-- Prev Nav -->
     
-        <a href="/2017/11/21/React学习笔记1/" id="post_nav-newer" class="prev-content">
-            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
-                <i class="material-icons">arrow_back</i>
-            </button>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            新篇
-        </a>
-    
 
     <!-- Section Spacer -->
     <div class="section-spacer"></div>
 
     <!-- Next Nav -->
     
-        <a href="/2017/11/20/hello-world/" id="post_nav-older" class="next-content">
+        <a href="/2017/11/21/React学习笔记1/" id="post_nav-older" class="next-content">
             旧篇
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
