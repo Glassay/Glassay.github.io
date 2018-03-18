@@ -12,8 +12,8 @@ timezone: Asia/Shanghai
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: https://github.com/Glassay/Glassay.github.io
-root: /
+url: Glassay.github.io
+root: /Glassay.github.io/
 permalink: :year/:month/:day/:title/
 permalink_defaults:
 
