@@ -78,5 +78,5 @@ theme: next
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type: git
-  repo: https://github.com/Glassay/Glassay.github.io
+  repo: https://github.com/Glassay/Glassay.github.io.git
   branch: master
